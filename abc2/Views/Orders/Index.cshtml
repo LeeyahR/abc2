@@ -1,0 +1,51 @@
+﻿@model IEnumerable<abc2.Models.Order>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h1>Orders</h1>
+
+<p>
+    <a asp-action="Register">Create New Order</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderId)</th>
+            <th>@Html.DisplayNameFor(model => model.CustomerID)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductId)</th>
+            <th>@Html.DisplayNameFor(model => model.Details)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+            <th>@Html.DisplayNameFor(model => model.OrderLocation)</th>
+            <th>@Html.DisplayNameFor(model => model.PartitionKey)</th>
+            <th>@Html.DisplayNameFor(model => model.RowKey)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.OrderId)</td>
+                <td>@Html.DisplayFor(modelItem => item.CustomerID)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProductId)</td>
+                <td>@Html.DisplayFor(modelItem => item.Details)</td>
+                <td>@Html.DisplayFor(modelItem => item.OrderDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.OrderLocation)</td>
+                <td>@Html.DisplayFor(modelItem => item.PartitionKey)</td>
+                <td>@Html.DisplayFor(modelItem => item.RowKey)</td>
+                <td>
+                    <a asp-action="Delete"
+                       asp-route-partitionKey="@item.PartitionKey"
+                       asp-route-rowKey="@item.RowKey"
+                       class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this order?');">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

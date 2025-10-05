@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "abc2", "abc2\abc2.csproj", "{C4380F3F-2724-4F4B-9580-D82C180614B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueFunction", "QueueFunction\QueueFunction.csproj", "{CF593FCA-2643-4E8D-99AD-DFF6C6DB7DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestQueue", "TestQueue\TestQueue.csproj", "{70F02D17-F146-49FA-998C-207828C517AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4380F3F-2724-4F4B-9580-D82C180614B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4380F3F-2724-4F4B-9580-D82C180614B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4380F3F-2724-4F4B-9580-D82C180614B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4380F3F-2724-4F4B-9580-D82C180614B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF593FCA-2643-4E8D-99AD-DFF6C6DB7DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF593FCA-2643-4E8D-99AD-DFF6C6DB7DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF593FCA-2643-4E8D-99AD-DFF6C6DB7DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF593FCA-2643-4E8D-99AD-DFF6C6DB7DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F02D17-F146-49FA-998C-207828C517AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F02D17-F146-49FA-998C-207828C517AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F02D17-F146-49FA-998C-207828C517AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F02D17-F146-49FA-998C-207828C517AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DCA16E6-7549-4CB6-9162-E123D97D39C9}
+	EndGlobalSection
+EndGlobal

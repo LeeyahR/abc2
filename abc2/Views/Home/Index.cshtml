@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Welcome to ABC Retail";
+}
+
+<div class="text-center my-5 bg-dark p-4 rounded">
+    <h1 class="display-4 fw-bold text-white">Welcome to ABC Retail</h1>
+    <p class="lead text-white">
+        At ABC Retail, we believe furniture should combine comfort, quality, and design —
+        all at a price you can trust.
+    </p>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-dark">
+                <!-- added text-dark -->
+                <h5 class="card-title">🛒 Shop Products</h5>
+                <p class="card-text">
+                    Explore our wide range of items and find exactly what you need.
+                </p>
+                <a asp-controller="Products" asp-action="Index" class="btn btn-primary rounded-pill">View Products</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-dark">
+                <!-- added text-dark -->
+                <h5 class="card-title">👥 Customers</h5>
+                <p class="card-text">
+                    Join our growing family of satisfied shoppers. Manage your profile here.
+                </p>
+                <a asp-controller="Customer" asp-action="Index" class="btn btn-purple rounded-pill">View Customers</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-dark">
+                <!-- added text-dark -->
+                <h5 class="card-title">📦 Orders</h5>
+                <p class="card-text">
+                    Place new orders and track your previous purchases with ease.
+                </p>
+                <a asp-controller="Orders" asp-action="Index" class="btn btn-pink rounded-pill">View Orders</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+        <div class="card shadow-lg border-0 h-100">
+            <div class="card-body text-dark">
+                <!-- added text-dark -->
+                <h5 class="card-title">📂 File Share</h5>
+                <p class="card-text">
+                    Upload, store, and manage files securely with our cloud file sharing service.
+                </p>
+                <a asp-controller="Files" asp-action="Index" class="btn btn-info rounded-pill">Go to File Share</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 text-center">
+    <h4>Why Shop With Us?</h4>
+    <ul class="list-unstyled">
+        <li>✔ Quality products you can trust</li>
+        <li>✔ Fast, reliable service</li>
+        <li>✔ Secure and easy shopping experience</li>
+        <li>✔ Safe cloud storage for your files</li>
+    </ul>
+</div>

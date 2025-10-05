@@ -1,0 +1,35 @@
+﻿@model abc2.Models.Product
+
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+<h1>AddProduct</h1>
+
+<h4>Products</h4>
+<form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+    <div>
+        <label>ProductName</label>
+        <input type="text" name="ProductName" required />
+    </div>
+    <div>
+        <label>Details</label>
+        <textarea name="Details"></textarea>
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="text" name="Price" required />
+    </div>
+    <div>
+        <label>Image</label>
+        <input type="file" name="file" required />
+    </div>
+    <button type="submit">Add Product</button>
+</form>
+
+<!-- Back to Home button -->
+<div class="mt-3">
+    <a asp-controller="Products" asp-action="Index" class="btn btn-primary">
+        Back to Products Page
+    </a>
+</div>
