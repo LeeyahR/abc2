@@ -9,7 +9,7 @@ namespace TestQueue
     {
         static async Task Main(string[] args)
         {
-            var connectionString = "DefaultEndpointsProtocol=https;AccountName=leeyahabc;AccountKey=qkX1wvQeL7RJklKmmSY57qcNWqZ0+3v1FyG08fOpOx+zm7UpI3FcMIoUvPooSz4Xkz8X9ToiZDuG+AStcanfxA==;EndpointSuffix=core.windows.net";
+            var connectionString = "DefaultEndpointsProtocol=https;AccountName=leeyahabc;AccountKey=d+T9zab7RlirpGfhkoYCn8OozFzaqfO+vrgCZs50QbUSAW7lnO8wlAE1qxll82rohsBPODBZQuJl+AStHJV2Ug==;EndpointSuffix=core.windows.net";
 
             // Customer queue
             var customerQueue = new QueueClient(connectionString, "customer-queue", new QueueClientOptions { MessageEncoding = QueueMessageEncoding.Base64 });

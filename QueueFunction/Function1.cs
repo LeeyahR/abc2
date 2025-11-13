@@ -32,7 +32,7 @@ namespace QueueFunctions
         public Function1(ILogger<Function1> logger)
         {
             _logger = logger;
-            _storageconnection = "DefaultEndpointsProtocol=https;AccountName=leeyahabc;AccountKey=qkX1wvQeL7RJklKmmSY57qcNWqZ0+3v1FyG08fOpOx+zm7UpI3FcMIoUvPooSz4Xkz8X9ToiZDuG+AStcanfxA==;EndpointSuffix=core.windows.net";
+            _storageconnection = "DefaultEndpointsProtocol=https;AccountName=leeyahabc;AccountKey=d+T9zab7RlirpGfhkoYCn8OozFzaqfO+vrgCZs50QbUSAW7lnO8wlAE1qxll82rohsBPODBZQuJl+AStHJV2Ug==;EndpointSuffix=core.windows.net";
 
             var serviceClient = new TableServiceClient(_storageconnection);
             _customer = serviceClient.GetTableClient("Customer");

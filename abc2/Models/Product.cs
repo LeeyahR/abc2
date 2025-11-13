@@ -21,9 +21,13 @@ namespace abc2.Models
         public double? Price { get; set; }
 
         //ITableEntity
+        [NotMapped]
         public string? PartitionKey { get; set; } = "Product";
+        [NotMapped]
         public string? RowKey { get; set; } = string.Empty;
+        [NotMapped]
         public ETag ETag { get; set; }
+        [NotMapped]
         public DateTimeOffset? Timestamp { get; set; }
     }
 }

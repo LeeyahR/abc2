@@ -1,4 +1,6 @@
+using abc2.Data;
 using abc2.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -26,7 +28,22 @@ builder.Services.AddSingleton<AzureFileShareService>(sp =>
     var connectionString = configuration.GetConnectionString("AzureStorage");
     return new AzureFileShareService(connectionString, "dummycontracts");
 });
+
+// Register the database context
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Enable Session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -1,0 +1,14 @@
+﻿@model abc2.Models.Product
+
+<h2>@Model.ProductName</h2>
+
+<p>@Model.Details</p>
+<p>Price: @Model.Price</p>
+
+<form asp-controller="Cart" asp-action="AddToCart" method="post">
+    <input type="hidden" name="productId" value="@Model.ProductId" />
+    <label>Quantity: <input type="number" name="quantity" value="1" min="1" /></label>
+    <button type="submit" class="btn btn-primary">Add to Cart</button>
+</form>
+
+<a asp-controller="Cart" asp-action="Index" class="btn btn-secondary">View Cart</a>

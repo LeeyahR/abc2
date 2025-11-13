@@ -1,0 +1,11 @@
+﻿@model abc2.Models.Order
+
+<h2>Checkout Complete</h2>
+
+<p>Your order has been placed successfully!</p>
+
+<p>Order Details: @Model.Details</p>
+<p>Status: @Model.Status</p>
+<p>Order Date (UTC): @Model.OrderDate.ToString("yyyy-MM-dd HH:mm:ss")</p>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to Home</a>

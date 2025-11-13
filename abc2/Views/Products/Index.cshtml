@@ -31,16 +31,26 @@ else if (Model != null && Model.Any())
                 <th>Details</th>
                 <th>Price</th>
                 <th>Date Added (UTC)</th>
+                <th>Action</th> <!-- New column for Add to Cart -->
             </tr>
         </thead>
         <tbody>
-            @foreach (var products in Model.OrderByDescending(prop => prop.Timestamp))
+            @foreach (var product in Model.OrderByDescending(prop => prop.Timestamp))
             {
                 <tr>
-                    <td>@products.ProductName</td>
-                    <td>@products.Details</td>
-                    <td>@products.Price</td>
-                    <td>@products.Timestamp?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.Details</td>
+                    <td>@product.Price</td>
+                    <td>@product.Timestamp?.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>
+                        <form asp-controller="Cart" asp-action="AddToCart" method="post" class="d-flex align-items-center">
+                            <!-- Replace this with the logged-in user's customer ID -->
+                            <input type="hidden" name="customerId" value="@TempData["CustomerId"] ?? 1" />
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="number" name="quantity" value="1" min="1" class="form-control form-control-sm me-2" style="width:70px;" />
+                            <button type="submit" class="btn btn-success btn-sm">Add to Cart</button>
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

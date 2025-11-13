@@ -1,0 +1,28 @@
+﻿@model abc2.Models.UserAccount
+
+<h2>Register</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="Role"></label>
+        <input asp-for="Role" />
+        <span asp-validation-for="Role"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<a asp-action="Login">Already have an account? Login</a>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
